@@ -1,7 +1,7 @@
 var direct = "DIRECT"; 
 var proxy = "PROXY 127.0.0.1:3008";
 
-var blockedList = [
+var blockedDomains = [
   'yandex.ru',
   'vk.com',
   'adfox.ru',
@@ -9,7 +9,7 @@ var blockedList = [
 ];
 
 function isBlocked(host) {
-	return blockedList.some(function(blockedHost) {
+	return blockedDomains.some(function(blockedHost) {
   	return host.indexOf(blockedHost) > -1;
   });
 }
